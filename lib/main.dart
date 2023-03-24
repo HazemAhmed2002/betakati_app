@@ -12,29 +12,65 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.cyan[700],
         body: SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-              child: Text("Container 1"),
-              color: Colors.red,
-              height: 100.0,
-              width: 100.0,
-            ),
-            Container(
-              child: Text("Container 2"),
-              color: Colors.green,
-              height: 100.0,
-              width: 100.0,
-            ),
-            Container(
-              child: Text("Container 3"),
-              color: Colors.blue,
-              height: 100.0,
-              width: 100.0,
-            ),
-          ],
-        )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/hazem.jpg'),
+              ),
+              Text(
+                'Hazem A. Lubbad',
+                style: TextStyle(
+                    fontFamily: 'EduNSWACTFoundation',
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'ios developer',
+                style: TextStyle(
+                    fontFamily: 'DeliciousHandrawn',
+                    fontSize: 23,
+                    color: Colors.grey.shade200,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                width: 200.0,
+                height: 30.0,
+                child: Divider(
+                  color: Colors.cyan[100],
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.cyan[700],
+                  ),
+                  title: Text(
+                    '+970 59-303-5939',
+                    style: TextStyle(color: Colors.black87, fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.cyan[700],
+                  ),
+                  title: Text(
+                    'ahmedhazeml734@gmail.com',
+                    style: TextStyle(color: Colors.black87, fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
